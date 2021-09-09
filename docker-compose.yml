@@ -1,0 +1,11 @@
+version: "3"
+
+services:
+
+  localstack-db:
+    container_name: localstack
+    image: mongo:4.0.26-xenial
+    ports:
+      - 27017:27017
+    volumes:
+      - ./localstack-data:/data/db
